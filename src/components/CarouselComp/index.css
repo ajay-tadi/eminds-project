@@ -1,0 +1,78 @@
+.carousel-template{
+    position: relative;
+
+ 
+}
+.carousel-indicator{
+    position: relative;
+    height: 55px;
+    width: 4px;
+    background-color: #e6eaee;
+    margin-left: 65px;
+    border-radius: 1px;
+    z-index: 1;
+    opacity: 30%;
+}
+.carousel-indicator-container{
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 18px;
+}
+.hover-me{
+    width: 1px;
+}
+.carousel-indicator-list{
+    position: absolute;
+    z-index: 2;
+    top: 150px;
+}
+.carousel-video-list{
+    color: rgb(255, 255, 255);
+}
+.carousel-video{
+    position: absolute  ;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: 0.5s;
+}
+.carousel-overlay{
+    position: absolute;
+    z-index: 1;
+    top: 70vh;
+    padding-left: 110px;
+}
+.carousel-overlay-button{
+    width: 148px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 35px;
+    opacity: 1;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+    color: #fff;
+    background-color: transparent;
+    transition: 0.5s;
+}
+.carousel-overlay-button:hover{
+    color: #000;
+    background-color: #fff;
+}
+.carousel-overlay-heading{
+    font-weight: 500;
+    transition: 0.5s;
+}
+.carousel-overlay-para{
+    font-weight: 200;
+    transition: 0.5s;
+}
+.carousel-black-gradient{
+    background: linear-gradient(to top , black, transparent,transparent,transparent);
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+}
