@@ -1,6 +1,6 @@
 .carousel-template{
     position: relative;
-
+    background-attachment: fixed;
  
 }
 .carousel-indicator{
@@ -29,20 +29,22 @@
 }
 .carousel-video-list{
     color: rgb(255, 255, 255);
+    height: 100vh;
 }
 .carousel-video{
-    position: absolute  ;
+    position: static  ;
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    filter: brightness(50%);
-    transition: 0.5s;
+    filter: brightness(70%);
+    transition: opacity .6s ease;
 }
 .carousel-overlay{
     position: absolute;
     z-index: 1;
     top: 70vh;
     padding-left: 110px;
+    color: rgb(255, 255, 255);
 }
 .carousel-overlay-button{
     width: 148px;
@@ -70,9 +72,12 @@
     transition: 0.5s;
 }
 .carousel-black-gradient{
-    background: linear-gradient(to top , black, transparent,transparent,transparent);
-    position: relative;
+    /* background: linear-gradient(to top , black, transparent,transparent,transparent); */
+    position: absolute;
     z-index: 1;
     height: 100vh;
     width: 100%;
+    background: linear-gradient( 0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5354516806722689) 56%, rgba(0, 0, 0, 0) 100% );
+    animation-delay: 2s;
+    transition: opacity .9s ease;
 }

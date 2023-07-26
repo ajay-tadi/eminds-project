@@ -141,35 +141,29 @@ function CarouselComp() {
 }
 
   const [displayCarouselData, setCarosuel] = useState(carouselData.carousel1)
-  const {heading,para} = displayCarouselData ;
+  const {src,heading,para} = displayCarouselData ;
 
-  const [setSRC,updateSRC] = useState('https://em-website.s3.amazonaws.com/videos/application.mp4');
 
 const onSelectCarousel = (e) =>{
 
   if (e === 'carousel1'){
-    updateSRC('https://em-website.s3.amazonaws.com/videos/Frontpage.mp4');
     setCarosuel(carouselData.carousel1)
   }
   else if (e === 'carousel2'){
-    updateSRC('https://em-website.s3.amazonaws.com/videos/automation.mp4');
     setCarosuel(carouselData.carousel2)
   }
   else if (e === 'carousel3'){
-    updateSRC('https://em-website.s3.amazonaws.com/videos/design.mp4');
     setCarosuel(carouselData.carousel3)
   }
   else if (e === 'carousel4'){
-    updateSRC('https://em-website.s3.amazonaws.com/videos/application.mp4')
     setCarosuel(carouselData.carousel4)
   }
   else if (e === 'carousel5'){
-    updateSRC('https://em-website.s3.amazonaws.com/videos/ai.mp4')
     setCarosuel(carouselData.carousel5)
   }
 
 }
-console.log(displayCarouselData)
+
   
   return (
     <div className='carousel-template'>
@@ -177,37 +171,37 @@ console.log(displayCarouselData)
     <div className='carousel-indicator-list'>
       
       {/*-----carousel-indicator-1----- */}
-      <div className='carousel-indicator-container' value="carousel1" onClick={() => onSelectCarousel('carousel1')} > 
+      <div className='carousel-indicator-container' value="carousel1" onClick={() => onSelectCarousel('carousel1')} onMouseOver={() => onSelectCarousel('carousel1')} > 
         <div className='carousel-indicator' ></div>
       </div>
 
       {/*-----carousel-indicator-2----- */}
-      <div className='carousel-indicator-container'  onClick={() => onSelectCarousel('carousel2')} >
+      <div className='carousel-indicator-container'  onClick={() => onSelectCarousel('carousel2')} onMouseOver={() => onSelectCarousel('carousel2')} >
         <div className='carousel-indicator' ></div>
       </div>
 
       {/*-----carousel-indicator-3----- */}
-      <div className='carousel-indicator-container'  onClick={() => onSelectCarousel('carousel3')} >
+      <div className='carousel-indicator-container'  onClick={() => onSelectCarousel('carousel3')} onMouseOver={() => onSelectCarousel('carousel3')} >
         <div className='carousel-indicator' ></div>
       </div>
 
       {/*-----carousel-indicator-4----- */}
-      <div className='carousel-indicator-container' onClick={() => onSelectCarousel('carousel4')} >
+      <div className='carousel-indicator-container' onClick={() => onSelectCarousel('carousel4')} onMouseOver={() => onSelectCarousel('carousel4')}>
         <div className='carousel-indicator' ></div>
       </div>
 
       {/*-----carousel-indicator-5----- */}
-      <div className='carousel-indicator-container'  onClick={() => onSelectCarousel('carousel5')} >
+      <div className='carousel-indicator-container'  onClick={() => onSelectCarousel('carousel5')} onMouseOver={() => onSelectCarousel('carousel5')}>
         <div className='carousel-indicator' ></div>
       </div>
     </div>
 
     <div className='carousel-video-list'>
    
-      <video autoPlay loop playsInline muted className="carousel-video" alt="First slide" > 
-        <source  src={setSRC} type='video/mp4' />
-      </video>
       <div className='carousel-black-gradient'></div>
+      <video autoPlay loop playsInline muted className="carousel-video" alt="First slide" key={src}> 
+        <source  src={src} type='video/mp4' />
+      </video>
       <div className='carousel-overlay'>
         <h1 className='carousel-overlay-heading'>{heading}</h1>
         <p className='carousel-overlay-para'>{para}</p>

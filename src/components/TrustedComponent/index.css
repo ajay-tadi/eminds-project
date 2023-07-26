@@ -1,0 +1,69 @@
+.trusted-main-card{
+    position:relative;
+    width: 100%;
+    min-height: 300px;
+    
+  
+}
+
+.trusted-description{
+    
+    width: 100%;
+    min-height: 100px;
+    padding: 30px;
+    background-color: #f6f5ee;
+    text-align: center;
+}
+.trusted-para{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #6a6a6a;
+    font-size: 14px;
+    
+}
+.global-locations{
+    width: 250px;
+    height: 208px;
+    background: #1269b4 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 14px;
+    opacity: 1;
+    transition: all 1s;
+    margin-left: auto;
+    margin-right: auto;
+}
+.global-locations:hover {
+    background-image: url('https://eminds.ai/Assets/images/gobal-location.svg');
+    transform: scale(1.05);
+}
+.global-locations h1 {
+    color: #fff;
+    font-family: Sofia Pro Regular;
+    font-size: 60px;
+    text-align: left;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    
+}
+.global-locations p {
+    color: #fff;
+    text-align: left;
+    height: 38px;
+    font-size: 14px;
+    position: relative;
+    top: 0;
+    left: 10%;
+}
+.trusted-cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 1.5rem!important;
+    padding-bottom: 1.5rem!important;
+    zoom: 80%;
+    padding: 0px 20%;
+    background-color: #fff;
+}
